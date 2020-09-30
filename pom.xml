@@ -63,6 +63,20 @@
     </dependencies>
 
     <build>
+<!--        B2. 配置resources 重新指明资源文件位置
+            TO application.properties
+-->
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+            </resource>
+            <resource>
+                <directory>src/main/java</directory>
+                <includes>
+                    <include>**/*.xml</include>
+                </includes>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
